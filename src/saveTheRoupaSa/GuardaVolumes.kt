@@ -11,10 +11,10 @@ class GuardaVolumes {
     }
 
     fun mostrarPecas(){
-            dicionario.forEach { (t, u) ->
+            dicionario.forEach { (chave, lista) ->
                 println("------------------------")
-                println("Referência: $t")
-                u.forEach {
+                println("Referência: $chave")
+                lista.forEach {
                     println("Tipo: ${it.tipoDePeca}")
                     println("Marca: ${it.marca}")
                     println("Modelo: ${it.modelo}")
