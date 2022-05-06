@@ -11,7 +11,7 @@ class GuardaVolumes {
     }
 
     fun mostrarPecas(){
-            dicionario.forEach { t, u ->
+            dicionario.forEach { (t, u) ->
                 println("------------------------")
                 println("Referência: $t")
                 u.forEach {

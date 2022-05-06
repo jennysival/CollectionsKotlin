@@ -4,7 +4,7 @@ import kotlin.system.exitProcess
 
 class Menu {
 
-    val guardaVolumes = GuardaVolumes()
+    private val guardaVolumes = GuardaVolumes()
 
     fun guardarOuRetirar(){
         println("------------------------------------------------")
@@ -45,7 +45,7 @@ class Menu {
         }
     }
 
-    fun escolherTipoDePeca(){
+    private fun escolherTipoDePeca(){
         println("------------------------------------------------")
         println("Qual tipo de peça deseja guardar?")
         println("[1] Roupa")
@@ -79,7 +79,7 @@ class Menu {
         }
     }
 
-    fun guardarPeca(peca: Peca){
+    private fun guardarPeca(peca: Peca){
         val listaDePecas = ArrayList<Peca>()
         peca.guardar()
         listaDePecas.add(peca)
@@ -87,7 +87,7 @@ class Menu {
         println("A referência da peça guardada é: ${guardaVolumes.contador}")
     }
 
-    fun novaPeca(){
+    private fun novaPeca(){
         println("------------------------------------------------")
         println("Deseja guardar uma nova peça? ")
         println("[1] SIM")
@@ -104,7 +104,7 @@ class Menu {
         }
     }
 
-    fun mostrarPecas(){
+    private fun mostrarPecas(){
         println("------------------------------------------------")
         println("[1] Buscar única peça")
         println("[2] Mostrar todas as peças")
@@ -138,7 +138,7 @@ class Menu {
 
     }
 
-    fun menuRetirada(){
+    private fun menuRetirada(){
         println("------------------------------------------------")
         print("Digite a referência da peça que deseja retirar: ")
         val codigoDigitado = readln().toInt()
